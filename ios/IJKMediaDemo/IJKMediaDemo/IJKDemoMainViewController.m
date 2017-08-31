@@ -27,7 +27,9 @@
 @interface IJKDemoMainViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property(nonatomic,strong) IBOutlet UITableView *tableView;
+// Open from
 @property(nonatomic,strong) NSArray *tableViewCellTitles;
+// History
 @property(nonatomic,strong) NSArray *historyList;
 
 @end
@@ -208,7 +210,7 @@
     }
 
     [self dismissViewControllerAnimated:YES completion:^(void){
-        [self.navigationController pushViewController:[[IJKVideoViewController alloc]   initWithURL:movieUrl] animated:YES];
+        [self.navigationController pushViewController:[[IJKVideoViewController alloc] initWithURL:movieUrl] animated:YES];
     }];
 }
 
