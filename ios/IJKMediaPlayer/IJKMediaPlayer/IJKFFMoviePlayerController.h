@@ -56,31 +56,90 @@
 
 #define kk_IJKM_KEY_STREAMS       @"streams"
 
+/**
+ 日志等级
+ 
+ - k_IJK_LOG_UNKNOWN: 未知
+ - k_IJK_LOG_DEFAULT: 默认
+ - k_IJK_LOG_VERBOSE: 详细
+ - k_IJK_LOG_DEBUG: 调试
+ - k_IJK_LOG_INFO: 信息
+ - k_IJK_LOG_WARN: 警告
+ - k_IJK_LOG_ERROR: 错误
+ - k_IJK_LOG_FATAL: 致命
+ - k_IJK_LOG_SILENT: 无日志
+ */
 typedef enum IJKLogLevel {
+	/// 未知
     k_IJK_LOG_UNKNOWN = 0,
+	/// 默认
     k_IJK_LOG_DEFAULT = 1,
 
+	/// 详细
     k_IJK_LOG_VERBOSE = 2,
+	/// 调试
     k_IJK_LOG_DEBUG   = 3,
+	/// 信息
     k_IJK_LOG_INFO    = 4,
+	/// 警告
     k_IJK_LOG_WARN    = 5,
+	/// 错误
     k_IJK_LOG_ERROR   = 6,
+	/// 致命
     k_IJK_LOG_FATAL   = 7,
+	/// 无日志
     k_IJK_LOG_SILENT  = 8,
 } IJKLogLevel;
 
+
+/**
+ ijkPlayer ffmpeg 控制器
+ */
 @interface IJKFFMoviePlayerController : NSObject <IJKMediaPlayback>
 
+
+/**
+ 初始化播放器
+
+ @param aUrl 播放资源URL
+ @param options ijk 选项
+ @return IJKFFMoviePlayerController 对象
+ */
 - (id)initWithContentURL:(NSURL *)aUrl
              withOptions:(IJKFFOptions *)options;
 
+
+/**
+ 初始化播放器
+
+ @param aUrlString 播放资源 URL 字符串
+ @param options ijk 选项
+ @return IJKFFMoviePlayerController 对象
+ */
 - (id)initWithContentURLString:(NSString *)aUrlString
                    withOptions:(IJKFFOptions *)options;
 
+/**
+ 就绪
+ */
 - (void)prepareToPlay;
+/**
+ 播放
+ */
 - (void)play;
+/**
+ 暂停
+ */
 - (void)pause;
+/**
+ 停止
+ */
 - (void)stop;
+/**
+ 是否正在播放
+
+ @return 是否正在播放
+ */
 - (BOOL)isPlaying;
 - (int64_t)trafficStatistic;
 - (float)dropFrameRate;

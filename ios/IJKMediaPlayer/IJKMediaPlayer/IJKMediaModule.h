@@ -27,7 +27,9 @@
 
 + (IJKMediaModule *)sharedModule;
 
+/// 屏幕是否常亮
 @property(atomic, getter=isAppIdleTimerDisabled)            BOOL appIdleTimerDisabled;
+/// 屏幕是否常亮
 @property(atomic, getter=isMediaModuleIdleTimerDisabled)    BOOL mediaModuleIdleTimerDisabled;
 
 @end
