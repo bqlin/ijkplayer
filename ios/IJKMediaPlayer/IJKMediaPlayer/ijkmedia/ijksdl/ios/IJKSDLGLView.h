@@ -27,12 +27,15 @@
 
 #include "ijksdl/ijksdl_vout.h"
 
+/**
+ ijk HUD 视图
+ */
 @interface IJKSDLGLView : UIView
 
-- (id) initWithFrame:(CGRect)frame;
-- (void) display: (SDL_VoutOverlay *) overlay;
+- (instancetype)initWithFrame:(CGRect)frame;
+- (void)display: (SDL_VoutOverlay *) overlay;
 
-- (UIImage*) snapshot;
+- (UIImage *)snapshot;
 - (void)setHudValue:(NSString *)value forKey:(NSString *)key;
 - (void)setShouldLockWhileBeingMovedToWindow:(BOOL)shouldLockWhiteBeingMovedToWindow __attribute__((deprecated("unused")));
 

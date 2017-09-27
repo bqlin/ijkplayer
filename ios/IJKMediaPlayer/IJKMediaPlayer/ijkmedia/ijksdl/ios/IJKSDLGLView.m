@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, IJKSDLGLViewApplicationState) {
 	return [CAEAGLLayer class];
 }
 
-- (id) initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -538,7 +538,7 @@ typedef NS_ENUM(NSInteger, IJKSDLGLViewApplicationState) {
 
 #pragma mark snapshot
 
-- (UIImage*)snapshot
+- (UIImage *)snapshot
 {
     [self lockGLActive];
 

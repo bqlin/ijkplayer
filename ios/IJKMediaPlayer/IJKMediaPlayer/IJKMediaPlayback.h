@@ -314,11 +314,14 @@ typedef NS_ENUM(NSInteger, IJKMediaEvent) {
      segmentIndex:(int)segmentIndex
      retryCounter:(int)retryCounter;
 
+/// 媒体事件
 @property(nonatomic, readonly) IJKMediaEvent event;
+/// 段索引
 @property(nonatomic, readonly) int segmentIndex;
+/// 重试次数
 @property(nonatomic, readonly) int retryCounter;
 
-@property(nonatomic, retain) NSString *url;
+@property(nonatomic, copy) NSString *url;
 @property(nonatomic, assign) int fd;
 @property(nonatomic, strong) NSString *msg;
 @property(nonatomic) int error; // set a negative value to indicate an error has occured.
@@ -329,7 +332,7 @@ typedef NS_ENUM(NSInteger, IJKMediaEvent) {
 
 @protocol IJKMediaUrlOpenDelegate <NSObject>
 
-- (void)willOpenUrl:(IJKMediaUrlOpenData*) urlOpenData;
+- (void)willOpenUrl:(IJKMediaUrlOpenData *) urlOpenData;
 
 @end
 

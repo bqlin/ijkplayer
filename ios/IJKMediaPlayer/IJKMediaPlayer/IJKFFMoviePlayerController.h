@@ -141,20 +141,66 @@ typedef enum IJKLogLevel {
  @return 是否正在播放
  */
 - (BOOL)isPlaying;
+/**
+ 流量统计
+
+ @return 流量
+ */
 - (int64_t)trafficStatistic;
+/**
+ 丢帧率
+
+ @return 丢帧率
+ */
 - (float)dropFrameRate;
 
+/**
+ 是否禁止后台播放
+
+ @param pause 后台暂停
+ */
 - (void)setPauseInBackground:(BOOL)pause;
+/**
+ 是否硬解码
+
+ @return 是否硬解码
+ */
 - (BOOL)isVideoToolboxOpen;
 
+/**
+ 是否输出日志
+
+ @param preferLogReport 是否输出日志
+ */
 + (void)setLogReport:(BOOL)preferLogReport;
+/**
+ 设置日志等级
+
+ @param logLevel 日志等级
+ */
 + (void)setLogLevel:(IJKLogLevel)logLevel;
+/**
+ 检查FFmpeg版本是否匹配
+
+ @param showAlert 是否弹窗提示
+ @return FFmpeg版本是否匹配
+ */
 + (BOOL)checkIfFFmpegVersionMatch:(BOOL)showAlert;
+/**
+ 检查播放器版本是否与指定版本匹配
+
+ @param showAlert 是否弹窗提示
+ @param version 指定版本
+ @return 播放器版本是否与指定版本匹配
+ */
 + (BOOL)checkIfPlayerVersionMatch:(BOOL)showAlert
                             version:(NSString *)version;
 
+/// 元数据帧率
 @property(nonatomic, readonly) CGFloat fpsInMeta;
+/// 输出帧率
 @property(nonatomic, readonly) CGFloat fpsAtOutput;
+/// 是否显示浮窗
 @property(nonatomic) BOOL shouldShowHudView;
 
 - (void)setOptionValue:(NSString *)value
@@ -187,6 +233,7 @@ typedef enum IJKLogLevel {
 - (void)didShutdown;
 
 #pragma mark KVO properties
+/// 播放及媒体信息监听
 @property (nonatomic, readonly) IJKFFMonitor *monitor;
 
 @end
