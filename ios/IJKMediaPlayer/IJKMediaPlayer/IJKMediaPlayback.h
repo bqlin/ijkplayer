@@ -177,7 +177,7 @@ typedef NS_ENUM(NSInteger, IJKMPMovieTimeOption) {
 
 /// 是否就绪播放
 @property(nonatomic, readonly)  BOOL isPreparedToPlay;
-/// 播放状体啊
+/// 播放状态
 @property(nonatomic, readonly)  IJKMPMoviePlaybackState playbackState;
 /// 加载状态
 @property(nonatomic, readonly)  IJKMPMovieLoadState loadState;

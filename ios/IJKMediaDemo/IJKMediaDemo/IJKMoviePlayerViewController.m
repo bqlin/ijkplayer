@@ -213,15 +213,15 @@
     switch (reason)
     {
         case IJKMPMovieFinishReasonPlaybackEnded:
-            NSLog(@"playbackStateDidChange: IJKMPMovieFinishReasonPlaybackEnded: %d\n", reason);
+            NSLog(@"playbackPlayBackDidFinish: IJKMPMovieFinishReasonPlaybackEnded: %d\n", reason);
             break;
 
         case IJKMPMovieFinishReasonUserExited:
-            NSLog(@"playbackStateDidChange: IJKMPMovieFinishReasonUserExited: %d\n", reason);
+            NSLog(@"playbackPlayBackDidFinish: IJKMPMovieFinishReasonUserExited: %d\n", reason);
             break;
 
         case IJKMPMovieFinishReasonPlaybackError:
-            NSLog(@"playbackStateDidChange: IJKMPMovieFinishReasonPlaybackError: %d\n", reason);
+            NSLog(@"playbackPlayBackDidFinish: IJKMPMovieFinishReasonPlaybackError: %d\n", reason);
             break;
 
         default:
