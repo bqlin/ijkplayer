@@ -73,6 +73,10 @@ typedef enum IJKAVDiscard {
 
 struct IjkMediaPlayer;
 
+
+/**
+ ijkPlayer FFmpeg 选项
+ */
 @interface IJKFFOptions : NSObject
 
 /**

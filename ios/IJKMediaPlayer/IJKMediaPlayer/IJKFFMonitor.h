@@ -23,7 +23,7 @@
 
 
 /**
- ijkPlayer mpeg 监视器
+ ijkPlayer FFmpeg 监视器
  */
 @interface IJKFFMonitor : NSObject
 
